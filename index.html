@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Password Show / Hide with Javascript</title>
+      <style media="screen">
+         .wrapper {
+          max-width:800px;
+          margin:auto;
+          border:2px solid red;
+          padding:2%;
+         }
+      </style>
+   </head>
+   <body>
+
+
+<div class="wrapper">
+      <p>
+         Click the radio button to toggle between password visibility.
+      </p>
+
+
+    <form class="" action="index.html" method="post">
+        <label for="">Password: </label>
+        <input type="password" id="myInput"><br><br>
+
+        <input type="checkbox" onclick="showPass()" > Show Password
+
+    </form>
+
+</div>
+
+
+<script type="text/javascript">
+
+ function showPass(){
+     let x = document.querySelector("#myInput");
+
+      //Check condition if type is = pass or text
+       if (x.type === "password") {
+            x.type = "text";
+       } else {
+          x.type = "password";
+       }
+
+}
+
+</script>
+
+
+   </body>
+</html>
